@@ -30,8 +30,8 @@ def pytest_html_report_title(report):
     report.title = "Colibri Expert Platform Test Report"
 
 
-def pytest_configure(config, get_env):
-    config._metadata['BaseUrl'] = base_url[get_env]
+def pytest_configure(config):
+    config._metadata['BaseUrl'] = base_url[config.getoption("--env")]
     # time_now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     # os.path.join(config.rootdir, 'log', f'{time_now}.log')
     config.option.log_file = log_path
