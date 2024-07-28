@@ -8,6 +8,6 @@ import pathlib
 import time
 
 time_now = time.strftime("%Y-%m-%d_%H-%M-%S")
-report_path = str(pathlib.Path(__file__).parent.parent / "report" / f"{time_now}.html")
+report_path = str(pathlib.Path(__file__).parent.parent / "report" / "report.html")
 log_path = str(pathlib.Path(__file__).parent.parent / "log" / f"{time_now}.log")
 driver_path = str(pathlib.Path(__file__).parent.parent / "msedgedriver.exe")
